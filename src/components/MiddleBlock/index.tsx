@@ -12,12 +12,6 @@ interface MiddleBlockProps {
 }
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
@@ -27,9 +21,9 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
+                <a href="/img/icons/CV_Abdul_Aziz.pdf" download="CV_Abdul_Aziz.pdf">
+                  <Button name="download">{t(button)}</Button>
+                </a>
               )}
             </Col>
           </ContentWrapper>

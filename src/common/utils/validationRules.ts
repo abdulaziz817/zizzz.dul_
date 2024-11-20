@@ -4,15 +4,15 @@ export default function validate(values: validateProps) {
   let errors = {} as validateProps;
 
   if (!values.name) {
-    errors.name = "Name is required";
+    errors.name = "Nama wajib diisi";
   }
   if (!values.email) {
-    errors.email = "Email address is required";
+    errors.email = "Alamat email wajib diisi";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = "Email address is invalid";
+    errors.email = "Alamat email tidak valid";
   }
   if (!values.message) {
-    errors.message = "Message is required";
+    errors.message = "Pesan wajib diisi";
   }
   return errors;
 }

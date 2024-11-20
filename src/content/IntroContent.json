@@ -1,12 +1,14 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "ABDUL AZIZ",
+  "text": "Seseorang yang gemar belajar hal-hal baru, terutama dalam desain grafis. Saya telah mendalami bidang ini selama lebih dari 5 tahun dan aktif dalam menciptakan desain untuk media sosial maupun cetak. Menurut saya, dengan desain, hidup menjadi lebih berwarna 🙂.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Chat Sekarang",
+      "link": "https://wa.me/6287782535212"
     },
     {
-      "title": "Learn more",
+      "title": "Instagram",
+      "link": "https://www.instagram.com/zizzz.dul_/",
       "color": "#fff"
     }
   ]

@@ -50,28 +50,20 @@ const ContentBlock = ({
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {direction === "right" ? (
-                <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo("about")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
+              <ButtonWrapper>
+              {Array.isArray(button) &&
+                button.map((item, id) => (
+                  <Button
+                    key={id}
+                    color={item.color}
+                    onClick={() => window.open(item.link, "_blank")} // Navigasi ke link
+                  >
+                    {t(item.title)}
+                  </Button>
+                ))}
+            </ButtonWrapper>
+            
+
               ) : (
                 <ServiceWrapper>
                   <Row justify="space-between">
